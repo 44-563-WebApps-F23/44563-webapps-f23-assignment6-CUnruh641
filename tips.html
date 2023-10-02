@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tip Page</title>
+    </head>
+    <body>
+        <h2>Corey Unruh shows tip amounts</h2>
+        <form>
+            <label for="form1_bill">Enter base amount</label>
+            <input type ="number" id="form1_bill" name="form1_bill" value=50>
+            <br>
+            <label for="form1_tip">Enter the tip percent</label>
+            <input type ="number" id="form1_tip" name="form1_tip" value="15">
+            <br>
+            <input type="button" onclick="tips()" value="Show tip">
+        </form>
+        <p id="result">This text will be replaced </p>
+        <script> 
+            function tips(){
+                console.log("Getting form values")
+                let bill = document.getElementById("form1_bill").value;
+                let tip = Number(document.getElementById("form1_tip").value);
+                let myOutput = "";
+                for(let i = 0; i < 5; i++){
+                    if(i == 0){
+                        myOutput = tip + "% is " + (bill * (tip / 100)) + ";";
+                    }
+                    if(i == 1){
+                        let tip2 = tip + 4;
+                        myOutput = myOutput + " " + tip2 + "% is " + (bill * (tip2 / 100)) + ";";
+                        tip - 4;
+                    }
+                    if(i == 2){
+                        let tip3 = tip + 8;
+                        myOutput = myOutput + " " + tip3 + "% is " + (bill * (tip3 / 100)) + ";";
+                        tip - 8;
+                    }
+                    if(i == 3){
+                        let tip4 = tip + 12;
+                        myOutput = myOutput + " " + tip4 + "% is " + (bill * (tip4 / 100)) + ";";
+                        tip - 12;
+                    }
+                    if(i == 4){
+                        let tip5 = tip + 16;
+                        myOutput = myOutput + " " + tip5 + "% is " + (bill * (tip5 / 100)) + ";";
+                        tip - 16;
+                    }
+                }
+                
+                out = document.getElementById("result");
+                out.innerHTML = "Tips are: " + myOutput;
+            }
+        </script>
+    </body>
+</html> 
