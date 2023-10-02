@@ -35,5 +35,30 @@
                 }
             }
         </script>
+        <div class="container">
+            <input type="image" onclick="selectImage()" src="universal-city-overlook.jpg" alt="Overlook Picture of Selected City"
+                width="100" height="100" id="1">
+            <script>
+                let useImage = 1;
+                function selectImage(){
+                    switch(useImage){
+                        case 1:
+                            document.getElementById('1').src="houston-overlook.jpg";
+                            useImage = 2;
+                            break;
+                        case 2:
+                            document.getElementById('1').src="colorado-springs-overlook.jpg";
+                            useImage = 3;
+                            break;
+                        case 3:
+                            document.getElementById('1').src="universal-city-overlook.jpg";
+                            useImage = 1;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            </script>
+        </div>
     </body>
 </html> 
