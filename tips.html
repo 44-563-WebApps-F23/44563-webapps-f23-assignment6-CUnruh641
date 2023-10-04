@@ -51,40 +51,5 @@
                 out.innerHTML = "Tips are: " + myOutput;
             }
         </script>
-        <form>
-            <input type="radio" id="radio-sum" name="mathOp" value="sum">
-            <label for="radio-sum">sum</label>
-            <br>
-            <input type="radio" id="radio-diff" name="mathOp" value="difference">
-            <label for="radio-diff">diff</label>
-            <br>
-            <input type="radio" id="radio-mult" name="mathOp" value="product">
-            <label for="radio-mult">mult</label>
-            <br>
-            <input type="button" onclick="chooseOp()" value="Choose">
-        </form>
-        <p id="result2">This text will be replaced </p>
-        <script>
-            function chooseOp(){
-                let bill = Number(document.getElementById("form1_bill").value);
-                let tip = Number(document.getElementById("form1_tip").value);
-                let sumOp = 0;
-                let diffOp = 0;
-                let multOp = 0;
-                out = document.getElementById('result2');
-                if(document.getElementById('radio-sum').checked){
-                    sumOp = bill + tip;
-                    out.innerHTML = "Sum of " + bill + " and " + tip + " is " + sumOp;
-                }
-                if(document.getElementById('radio-diff').checked){
-                    diffOp = bill - tip;
-                    out.innerHTML = "Difference of " + bill + " and " + tip + " is " + diffOp;
-                }
-                if(document.getElementById('radio-mult').checked){
-                    multOp = bill * tip;
-                    out.innerHTML = "Product of " + bill + " and " + tip + " is " + multOp;
-                }
-            }
-        </script>
     </body>
 </html> 
