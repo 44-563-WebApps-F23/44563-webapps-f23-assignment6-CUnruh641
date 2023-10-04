@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cruising Page</title>
+    </head>
+    <body>
+        <h2>Corey Unruh goes on a cruise</h2>
+        <form>
+            <input type ="checkbox" id="check1" name="check1" value="True">
+            <label for="check1">Shares Cabin</label>
+            <br>
+            <input type ="checkbox" id="check2" name="check2" value="True">
+            <label for="check2">Breakfast</label>
+            <br>
+            <input type ="checkbox" id="check3" name="check3" value="False">
+            <label for="check3">Pool Pass</label>
+            <br>
+            <input type="button" onclick="selectCruise()" value="Select a cruise">
+        </form>
+        <p id="result">This text will be replaced </p>
+        <script>
+            let my_cruise = {};
+            function selectCruise(){
+                let my_cruise = {};
+                my_cruise = {
+                    "Shares Cabin":document.getElementById('check1').checked,
+                    "Breakfast":document.getElementById('check2').checked,
+                    "Pool Pass":document.getElementById('check3').checked
+                };
+                out = document.getElementById("result");
+                out.innerHTML = "Shared Cabin: " + my_cruise["Shares Cabin"] + ", Breakfast: "
+                    + my_cruise["Breakfast"] + ", Pool Pass: " + my_cruise["Pool Pass"];
+            }
+        </script>
+    </body>
+</html>
